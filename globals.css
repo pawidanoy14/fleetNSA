@@ -1,0 +1,52 @@
+:root {
+  --bg: #f4f2ed;
+  --sidebar-bg: #1b1a17;
+  --sidebar-fg: #efeae0;
+  --sidebar-muted: #9a948a;
+  --accent: #FFC20E;
+  --accent-shadow: #d99b00;
+  --text: #1c1b18;
+  --muted: #8a8478;
+  --border: #e9e4da;
+  --card-bg: #fffdf9;
+  --ok-text: #1f7a45; --ok-bg: #e7f4ec; --ok-bd: #c3e3d0; --ok-dot: #2E9E5B;
+  --warn-text: #b46200; --warn-bg: #fbefd6; --warn-bd: #f0dcaa; --warn-dot: #F0A000;
+  --bad-text: #c1122f; --bad-bg: #fbe1e6; --bad-bd: #f3c3cd; --bad-dot: #E4002B;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "IBM Plex Sans Thai", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #0A5FB4; text-decoration: none; }
+.brand-font { font-family: "Anuphan", sans-serif; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 10px 12px; font-size: 13px; }
+thead th {
+  font-size: 11px; letter-spacing: .3px; color: var(--muted);
+  border-bottom: 1px solid var(--border); cursor: pointer; white-space: nowrap;
+  position: sticky; top: 0; background: var(--card-bg);
+}
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:hover { background: #faf8f3; }
+.card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 14px; padding: 18px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+  padding: 4px 10px; border-radius: 999px; border: 1px solid;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; }
+input, select, button { font-family: inherit; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #d8d3c8; border-radius: 8px; border: 2px solid var(--bg); }
+@media (max-width: 860px) {
+  #appRoot { flex-direction: column !important; }
+  #sidebar { width: 100% !important; height: auto !important; flex-direction: row !important; overflow-x: auto; }
+  #navList { flex-direction: row !important; }
+  .navlabel { display: none !important; }
+}
